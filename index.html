@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSB Image Encryption</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Encryption-Then-Compression System</h1>
+
+  <div id="login-section">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="authenticateUser()">Login</button>
+  </div>
+
+  <div id="encryption-section" class="hidden">
+    <h2>Image Encryption</h2>
+    <input type="file" id="imageInput" accept="image/jpeg">
+    <input type="text" id="message" placeholder="Enter message to hide">
+    <button onclick="encryptImage()">Encrypt Image</button>
+    <br><br>
+    <h3>Encrypted Image:</h3>
+    <canvas id="canvas"></canvas>
+    <br>
+    <a id="downloadLink" download="encrypted_image.png">Download Encrypted Image</a>
+  </div>
+
+  <div id="decryption-section" class="hidden">
+    <h2>Decrypt Image</h2>
+    <input type="file" id="decryptionInput" accept="image/png">
+    <button onclick="decryptImage()">Extract Message</button>
+    <p>Hidden Message: <span id="extractedMessage"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
